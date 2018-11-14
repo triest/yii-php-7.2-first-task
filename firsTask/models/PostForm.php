@@ -1,24 +1,18 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: triest
+ * Date: 06.11.2018
+ * Time: 21:13
+ */
 
 namespace app\models;
 
-use Yii;
-use yii\base\Model;
 
-/**
- * LoginForm is the model behind the login form.
- *
- * @property User|null $user This property is read-only.
- *
- */
-class ContactForm extends Model
+class PostForm  extends Model
 {
-    public $username;
-   // public $password;
-   // public $rememberMe = true;
-
-    private $_user = false;
-
+    public $title;
+    public $content;
 
     /**
      * @return array the validation rules.
@@ -27,7 +21,7 @@ class ContactForm extends Model
     {
         return [
             // email and password are both required
-            [['username', 'text'], 'required'],
+            [['title', ''], 'required'],
             //[['email'], 'email'],
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],

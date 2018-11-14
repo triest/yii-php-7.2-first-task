@@ -23,6 +23,8 @@ class Tag extends \yii\db\ActiveRecord
         return 'tag';
     }
 
+
+
     /**
      * {@inheritdoc}
      */
@@ -30,6 +32,7 @@ class Tag extends \yii\db\ActiveRecord
     {
         return [
             [['frequency'], 'integer'],
+            [['name'], 'string', 'max' => 255],
             [['name'], 'string', 'max' => 255],
         ];
     }
@@ -52,5 +55,15 @@ class Tag extends \yii\db\ActiveRecord
     public function getPostTags()
     {
         return $this->hasMany(PostTag::className(), ['tag_id' => 'id']);
+    }
+
+    public function getPosts()
+    {
+        return $this->hasMany(Post::className(), ['id' => 'post_id'])
+            ->viaTable('post_tag',['tag_id'=>'id']);
+    }
+
+    public function getName(){
+
     }
 }

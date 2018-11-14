@@ -1,53 +1,50 @@
 <?php
-
-/* @var $this yii\web\View */
-
-$this->title = 'My Yii Application';
+use yii\helpers\Url;
+use yii\widgets\LinkPager;
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
+<!--main content start-->
+<div class="main-content">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            <div class="col-md-8">
+                <?php foreach($post as $article):?>
+                    <article class="post">
+                        <div class="post-thumb">
+                            <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>"></a>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                        </div>
+                        <div class="post-content">
+                            <header class="entry-header text-center text-uppercase">
+                                <h6></a></h6>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                                <h1 class="entry-title"><a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>"><?= $article->title?></a></h1>
+                                <?= $article->getDate();?></span><ul class="text-center pull-right"></ul>
+
+                            </header>
+                            <b>Content:</b>
+                            <div class="entry-content">
+                                <p><?= $article->content?>
+                                </p>
+
+                                <div class="btn-continue-reading text-center text-uppercase">
+                                    <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>" class="more-link">Detail</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+
+                <?php
+                echo LinkPager::widget([
+                    'pagination' => $pagination,
+                ]);
+                ?>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
         </div>
-
     </div>
 </div>
+<!-- end main content-->
+<!--footer start-->

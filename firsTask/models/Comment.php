@@ -9,7 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property string $content
- * @property string $tags
+
  * @property int $status
  * @property int $post_id
  *
@@ -33,8 +33,10 @@ class Comment extends \yii\db\ActiveRecord
         return [
             [['content'], 'required'],
             [['status', 'post_id'], 'integer'],
-            [['content', 'tags'], 'string', 'max' => 255],
+            [['content'], 'string', 'max' => 255],
             [['post_id'], 'exist', 'skipOnError' => true, 'targetClass' => Post::className(), 'targetAttribute' => ['post_id' => 'id']],
+            [['create_time'], 'date','format'=>'php:Y-m-d-h-mm-s'],
+            [['create_time'],'default','value'=>date('Y-m-d-h-mm-s')],
         ];
     }
 
@@ -46,9 +48,10 @@ class Comment extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'content' => 'Content',
-            'tags' => 'Tags',
+           // 'tags' => 'Tags',
             'status' => 'Status',
             'post_id' => 'Post ID',
+
         ];
     }
 
@@ -58,5 +61,14 @@ class Comment extends \yii\db\ActiveRecord
     public function getPost()
     {
         return $this->hasOne(Post::className(), ['id' => 'post_id']);
+    }
+
+    public function saveStatus($status)
+    {
+      //  var_dump($status);
+      //  die();
+        $this->status=$status;
+        return $this->save(false);
+
     }
 }
