@@ -83,6 +83,9 @@ class SiteController extends Controller
                 'commentForm'=>$commentForm
             ]);
     }
+
+
+
     public function actionView($id){
         $post = Post::findOne($id);
         $tags=$post->tags;

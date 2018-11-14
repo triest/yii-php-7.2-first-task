@@ -118,7 +118,7 @@ class Post extends \yii\db\ActiveRecord
     {
         $selectedIds = $this->getComments()->select(['id','content','status','post_id'])->where(['status'=>1])->all();
        //   var_dump($selectedIds);
-        //  die();
+     //     die();
         return $selectedIds;
        // return ArrayHelper::getColumn($selectedIds, ['id','content','status','post_id']);
     }

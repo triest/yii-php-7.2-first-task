@@ -2,12 +2,16 @@
 
 namespace app\modules\admin\controllers;
 
+
 use Yii;
 use app\models\Post;
 use app\models\PostSearch;
+use app\models\Tag;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
+
 
 /**
  * PostController implements the CRUD actions for Post model.
@@ -123,5 +127,55 @@ class PostController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionSetTags($id){
+        $post=$this->findModel($id);
+        $selectedTags=[];
+        $selectedTags=$post->getSelectedTags();
+        //   var_dump($selectedTags);
+        $tags=ArrayHelper::map(Tag::find()->all(),'id','name');
+        if(Yii::$app->request->isPost){
+            //   echo 'ispost';
+            $tags=Yii::$app->request->post('tags');
+            //  var_dump($tags);
+            $post->saveTags($tags);
+            //  echo 'tags saved';
+            //   die();
+            return $this->actionView($id);
+            //  return $this->render(['view','id'=>$post->id]);
+        }
+        return $this->render('tags',['post'=>$post,'tags'=>$tags,'selectedTags'=>$selectedTags]);
+        //var_dump($post);
+        //var_dump($tag->post);
+    }
+    public function actionSetStatus($id){
+        //  var_dump($id);
+        //  die();
+        $post=$this->findModel($id);
+        $selectedTags=[];
+        $selectedTags=$post->getSelectedTags();
+        //   var_dump($selectedTags);
+        $tags=ArrayHelper::map(Tag::find()->all(),'id','name');
+        if(Yii::$app->request->isPost){
+            //   echo 'ispost';
+            //var_dump(Yii::$app->request);
+            // die();
+            //  $tags=Yii::$app->request->post('tags');
+            //    var_dump(Yii::$app->request->post());
+            $status=Yii::$app->request->post("status");
+            var_dump($status);
+            //  var_dump($tags);
+            $post->saveStatus($status);
+            //    die();
+            //  echo 'tags saved';
+            //   die();
+            return $this->actionView($id);
+            //  return $this->render(['view','id'=>$post->id]);
+        }
+        $status=[];
+        return $this->render('status',['post'=>$post]);
+        //var_dump($post);
+        //var_dump($tag->post);
     }
 }
