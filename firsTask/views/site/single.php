@@ -62,13 +62,15 @@ use yii\widgets\LinkPager;
                     <?php if(!empty($comments)):?>
 
                         <?php foreach($comments as $comment):?>
+
                             <div class="bottom-comment">
+                                <div class="comment-date">
+                                    <b><?= $comment->create_time ?></b>
+                                </div>
                                 <div class="commemt-text">
                                     <?= $comment->content ?>
                                 </div>
-                                <div class="comment-date">
-                                    <?= $comment->create_time ?>
-                                </div>
+
                             </div>
                         <?php endforeach ?>
                     <?php endif; ?>

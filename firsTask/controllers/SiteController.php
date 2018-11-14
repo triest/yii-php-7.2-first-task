@@ -93,7 +93,8 @@ class SiteController extends Controller
         //  die();
         $selectedTags=$post->getSelectedTags();
         // $comments=$post->comments;
-        $comments=$post->getSelectedComments();
+        $comments=$post->getArticleComments();
+
         //  var_dump($comments);
         $commentForm=new CommentForm();
         //  var_dump($selectedTags);
@@ -199,7 +200,8 @@ class SiteController extends Controller
         return $tags;
     }
     public function getLastComments(){
-        $comments=Comment::find()->orderBy('create_time','ASC')->limit(5)->all();
+
+        $comments=Comment::find()->where(['status'=>2])->orderBy('create_time','ASC')->limit(5)->all();
         //  var_dump($comments);
         return $comments;
     }
