@@ -75,6 +75,7 @@ class SiteController extends Controller
             ->limit($pagination->limit)
             ->all();
         $commentForm = new CommentForm();
+        //die();
         return $this->render('index',
             [
                 'post'=>$posts,
@@ -169,6 +170,7 @@ class SiteController extends Controller
         // var_dump($posts);
         $pageSize=10;
         $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>$pageSize]);
+        //die();
         return $this->render('index',
             [
                 'post'=>$posts,
