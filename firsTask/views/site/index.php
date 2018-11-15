@@ -23,7 +23,7 @@ use yii\widgets\LinkPager;
                             </header>
                             <b>Content:</b>
                             <div class="entry-content">
-                                <p><?= $article->content?>
+                                <p><?= $article->getPreview()?>
                                 </p>
 
                                 <div class="btn-continue-reading text-center text-uppercase">

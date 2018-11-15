@@ -195,5 +195,12 @@ class Post extends \yii\db\ActiveRecord
         return $this->getComments()->where(['status'=>2])->all();
     }
 
+    public function getPreview(){
+      // $text_cut=$this->content;
+        $text_cut=mb_substr($this->content, 0, 100);
+        //var_dump($text_cut);
+        return $text_cut;
+
+    }
 
 }

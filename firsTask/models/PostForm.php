@@ -21,7 +21,7 @@ class PostForm  extends Model
     {
         return [
             // email and password are both required
-            [['title', ''], 'required'],
+            [['title', 'content'], 'required'],
             //[['email'], 'email'],
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
