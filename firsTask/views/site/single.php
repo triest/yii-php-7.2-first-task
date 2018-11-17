@@ -8,6 +8,7 @@
 
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
+$this->title =$post->title;
 ?>
 <!--main content start-->
 <div class="main-content">

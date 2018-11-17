@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
+$this->title = "Список статей";
 ?>
 <!--main content start-->
 <div class="main-content">
