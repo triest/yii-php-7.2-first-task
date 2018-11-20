@@ -62,12 +62,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        // $data=Post::find();
+
         $query = Post::find()->where(['status'=>2]);
-        $countQuery = clone $query;
-        $count=$query->count();
-        //   $query = Post::find();
-        // get the total number of articles (but do not fetch the article data yet)
         $count = $query->count();
         $pageSize=10;
         $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>$pageSize]);
@@ -88,17 +84,9 @@ class SiteController extends Controller
 
     public function actionView($id){
         $post = Post::findOne($id);
-        $tags=$post->tags;
-        //  var_dump($tags);
-        //  die();
         $selectedTags=$post->getSelectedTags();
-        // $comments=$post->comments;
         $comments=$post->getArticleComments();
-
-        //  var_dump($comments);
         $commentForm=new CommentForm();
-        //  var_dump($selectedTags);
-        //   die();
         return $this->render('single',[
             'post'=>$post,
             'tags'=>$selectedTags,
@@ -161,20 +149,16 @@ class SiteController extends Controller
         return $this->render('about');
     }
     public function actionTag($tag){
-        // var_dump($tag);
+
         $tags2=Tag::find()
             ->where(['name'=>$tag])
             ->one();
-        //   $tags2=Tag::find()->where(['name'=>$tag])->andWhere(['status'=>2])->one();
-        //  var_dump($tags2);
         $posts=$tags2->getPosts()->select(['id','title','create_time'])
             ->where(['status'=>2])
             ->all();
         $count = 10;
-        // var_dump($posts);
         $pageSize=10;
         $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>$pageSize]);
-        //die();
         return $this->render('index',
             [
                 'post'=>$posts,
@@ -182,7 +166,6 @@ class SiteController extends Controller
             ]);
     }
     public function  actionComment($id){
-        //die($id);
         $model = new CommentForm();
         if(Yii::$app->request->isPost)
         {
@@ -195,14 +178,11 @@ class SiteController extends Controller
         }
     }
     public function getPoluparTags(){
-        //   return 'hello word';
         $tags=Tag::find()->limit(10)->all();
         return $tags;
     }
     public function getLastComments(){
-
         $comments=Comment::find()->where(['status'=>2])->orderBy('create_time','ASC')->limit(5)->all();
-        //  var_dump($comments);
         return $comments;
     }
 }
