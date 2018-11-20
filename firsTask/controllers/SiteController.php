@@ -167,6 +167,7 @@ class SiteController extends Controller
     }
     public function  actionComment($id){
         $model = new CommentForm();
+        //var_dump($id);
         if(Yii::$app->request->isPost)
         {
             $model->load(Yii::$app->request->post());
@@ -174,6 +175,9 @@ class SiteController extends Controller
             {
                 Yii::$app->getSession()->setFlash('comment', 'Your comment will be added soon!');
                 return $this->redirect(['site/view','id'=>$id]);
+            }
+            else{
+                return $this->redirect(['error']);
             }
         }
     }

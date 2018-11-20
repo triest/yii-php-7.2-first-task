@@ -9,7 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property string $content
-
+ * @property string $create_time
  * @property int $status
  * @property int $post_id
  *
@@ -36,7 +36,7 @@ class Comment extends \yii\db\ActiveRecord
             [['content'], 'string', 'max' => 255],
             [['post_id'], 'exist', 'skipOnError' => true, 'targetClass' => Post::className(), 'targetAttribute' => ['post_id' => 'id']],
             [['create_time'], 'date','format'=>'php:Y-m-d-h-mm-s'],
-            [['create_time'],'default','value'=>date('Y-m-d-h-mm-s')],
+            [['create_time'],'default','value'=>date('Y-m-d H:i:s.u ')]
         ];
     }
 
