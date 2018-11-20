@@ -48,7 +48,6 @@ class Comment extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'content' => 'Content',
-           // 'tags' => 'Tags',
             'status' => 'Status',
             'post_id' => 'Post ID',
 
@@ -65,8 +64,6 @@ class Comment extends \yii\db\ActiveRecord
 
     public function saveStatus($status)
     {
-      //  var_dump($status);
-      //  die();
         $this->status=$status;
         return $this->save(false);
 

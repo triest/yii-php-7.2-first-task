@@ -63,7 +63,4 @@ class Tag extends \yii\db\ActiveRecord
             ->viaTable('post_tag',['tag_id'=>'id']);
     }
 
-    public function getName(){
-
-    }
 }

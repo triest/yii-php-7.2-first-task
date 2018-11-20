@@ -100,8 +100,6 @@ class Post extends \yii\db\ActiveRecord
     }
 
     public function getTags2($id){
-
-
         $tags=null;
         return $tags;
     }
@@ -109,26 +107,19 @@ class Post extends \yii\db\ActiveRecord
     public function getSelectedTags()
     {
         $selectedIds = $this->getTags()->select(['id','name'])/*->asArray()*/->all();
-      //  var_dump($selectedIds);
-      //  die();
         return ArrayHelper::getColumn($selectedIds, ['name']);
     }
 
     public function getSelectedComments()
     {
         $selectedIds = $this->getComments()->select(['id','content','status','post_id'])->where(['status'=>1])->all();
-       //   var_dump($selectedIds);
-     //     die();
         return $selectedIds;
-       // return ArrayHelper::getColumn($selectedIds, ['id','content','status','post_id']);
     }
 
 
     public function getSelectedTags2()
     {
         $selectedIds = $this->getTags()->select('id','name')->all();
-         //  var_dump($selectedIds);
-        //  die();
         return$selectedIds;
     }
 
@@ -160,23 +151,13 @@ class Post extends \yii\db\ActiveRecord
     }
 
     public static function getAll($pagination=5){
-        // build a DB query to get all articles with status = 1
-        $query = Post::find();
-
-// get the total number of articles (but do not fetch the article data yet)
+         $query = Post::find();
         $count = $query->count();
-
-// create a pagination object with the total count
         $pagination = new Pagination(['totalCount' => $count,'pageSize'=>$pagination]);
-
-// limit the query using the pagination and retrieve the articles
        return $post = $query->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
-        //var_dump($post);
-    //    die();
         $date['post']=$post;
-       // $date['pagination']=$pagination;
         return $date;
     }
 
@@ -196,9 +177,7 @@ class Post extends \yii\db\ActiveRecord
     }
 
     public function getPreview(){
-      // $text_cut=$this->content;
         $text_cut=mb_substr($this->content, 0, 100);
-        //var_dump($text_cut);
         return $text_cut;
 
     }
