@@ -156,9 +156,7 @@ class SiteController extends Controller
         $posts=$tags2->getPosts()->select(['id','title','create_time'])
             ->where(['status'=>2])
             ->all();
-        $count = 10;
-        $pageSize=10;
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>$pageSize]);
+        $pagination = new Pagination(['totalCount' => 10, 'pageSize'=>10]);
         return $this->render('index',
             [
                 'post'=>$posts,
