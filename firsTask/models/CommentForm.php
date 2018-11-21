@@ -18,8 +18,11 @@ class CommentForm extends Model
     {
         $comment = new Comment;
         $comment->content = $this->comment;
+       // $comment->author = Yii::$app->user->id;
         $comment->post_id = $article_id;
         $comment->status = 1;
+     //   $comment->create_time=Now();
+      //  $comment->create_time = date('Y-m-d-h-mm-s');
         return $comment->save();
     }
 
