@@ -25,12 +25,9 @@ class ContactForm extends Model
     public function rules()
     {
         return [
-            // email and password are both required
             [['username', 'text'], 'required'],
-            //[['email'], 'email'],
-            // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
-            // password is validated by validatePassword(
+
         ];
     }
 

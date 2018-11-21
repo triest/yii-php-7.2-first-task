@@ -1,5 +1,4 @@
 <?php
-
 namespace app\models;
 
 use Yii;
@@ -31,7 +30,6 @@ class Post extends \yii\db\ActiveRecord
     {
         return 'post';
     }
-
     /**
      * {@inheritdoc}
      */
@@ -47,7 +45,6 @@ class Post extends \yii\db\ActiveRecord
             [['author_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['author_id' => 'id']],
         ];
     }
-
     /**
      * {@inheritdoc}
      */
@@ -65,18 +62,15 @@ class Post extends \yii\db\ActiveRecord
             'update_time' => 'Update Time',
         ];
     }
-
     /**
      * @return \yii\db\ActiveQuery
      */
     public function getAuthor()
-{
-    return $this->hasOne(User::className(), ['id' => 'author_id']);
-}
-
+    {
+        return $this->hasOne(User::className(), ['id' => 'author_id']);
+    }
     public function getAuthor2()
     {
-
     }
     /**
      * @return \yii\db\ActiveQuery
@@ -85,70 +79,40 @@ class Post extends \yii\db\ActiveRecord
     {
         return $this->hasMany(PostTag::className(), ['post_id' => 'id']);
     }
-
     public function getItems()
     {
         return $this->hasMany(\phpDocumentor\Reflection\DocBlock\Tag::className(), ['id' => 'tag_id'])
             ->viaTable('post_tag', ['post_id' => 'id']);
     }
-
-
     public function getTags()
     {
         return $this->hasMany(Tag::className(), ['id' => 'tag_id'])
             ->viaTable('post_tag', ['post_id' => 'id']);
     }
-
-<<<<<<< HEAD
-    public function getId(){
-        return $this->id;
-=======
     public function getTags2($id){
-
-
         $tags=null;
         return $tags;
->>>>>>> parent of 76c62c9... cleare code? not end
     }
-
-
-
     public function getSelectedTags()
     {
         $selectedIds = $this->getTags()->select(['id','name'])/*->asArray()*/->all();
-      //  var_dump($selectedIds);
-      //  die();
         return ArrayHelper::getColumn($selectedIds, ['name']);
     }
-
     public function getSelectedComments()
     {
         $selectedIds = $this->getComments()->select(['id','content','status','post_id'])->where(['status'=>1])->all();
-       //   var_dump($selectedIds);
-     //     die();
         return $selectedIds;
-       // return ArrayHelper::getColumn($selectedIds, ['id','content','status','post_id']);
     }
-
-
-<<<<<<< HEAD
-=======
     public function getSelectedTags2()
     {
         $selectedIds = $this->getTags()->select('id','name')->all();
-         //  var_dump($selectedIds);
-        //  die();
         return$selectedIds;
     }
-
->>>>>>> parent of 76c62c9... cleare code? not end
     public function saveTags($tags)
     {
-
         if (is_array($tags))
         {
             $this->clearCurrentTags();
-
             foreach($tags as $tag_id)
             {
                 $tag = Tag::findOne($tag_id);
@@ -156,82 +120,47 @@ class Post extends \yii\db\ActiveRecord
             }
         }
     }
-
     public function saveStatus($status)
     {
-     $this->status=$status;
-     return $this->save(false);
+        $this->status=$status;
+        return $this->save(false);
+    }
+    public function getDate()
+    {
+        return Yii::$app->formatter->asDate($this->create_time);
+    }
+    public static function getAll($pagination=5){
+        $query = Post::find();
+        $count = $query->count();
+        $pagination = new Pagination(['totalCount' => $count,'pageSize'=>$pagination]);
+        return $post = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        $date['post']=$post;
+        return $date;
+    }
+    public function clearCurrentTags()
+    {
+        PostTag::deleteAll(['post_id'=>$this->id]);
+    }
+    public function getComments()
+    {
+        return $this->hasMany(Comment::className(), ['post_id'=>'id']);
+    }
+    public function getArticleComments()
+    {
+        return $this->getComments()->where(['status'=>2])->all();
+    }
+    public function getPreview(){
+        $text_cut=mb_substr($this->content, 0, 100);
+        return $text_cut;
     }
 
     public function getContent(){
         return $this->content;
     }
 
-    public function getDate()
-    {
-        return Yii::$app->formatter->asDate($this->create_time);
+    public function getId(){
+        return $this->id;
     }
-
-    public static function getAll($pagination=5){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-       $query = Post::find();
-       $count = $query->count();
-       $pagination = new Pagination(['totalCount' => $count,'pageSize'=>$pagination]);
-       return $post = $query->offset($pagination->offset)
-            ->limit($pagination->limit)
-            ->all();
-=======
-=======
->>>>>>> parent of 76c62c9... cleare code? not end
-=======
->>>>>>> parent of 76c62c9... cleare code? not end
-=======
->>>>>>> parent of 76c62c9... cleare code? not end
-        // build a DB query to get all articles with status = 1
-        $query = Post::find();
-
-// get the total number of articles (but do not fetch the article data yet)
-        $count = $query->count();
-
-// create a pagination object with the total count
-        $pagination = new Pagination(['totalCount' => $count,'pageSize'=>$pagination]);
-
-// limit the query using the pagination and retrieve the articles
-       return $post = $query->offset($pagination->offset)
-            ->limit($pagination->limit)
-            ->all();
-        //var_dump($post);
-    //    die();
-        $date['post']=$post;
-       // $date['pagination']=$pagination;
-        return $date;
->>>>>>> parent of 76c62c9... cleare code? not end
-    }
-
-    public function clearCurrentTags()
-    {
-        PostTag::deleteAll(['post_id'=>$this->id]);
-    }
-
-    public function getComments()
-    {
-        return $this->hasMany(Comment::className(), ['post_id'=>'id']);
-    }
-
-    public function getArticleComments()
-    {
-        return $this->getComments()->where(['status'=>2])->all();
-    }
-
-    public function getPreview(){
-      // $text_cut=$this->content;
-        $text_cut=mb_substr($this->content, 0, 100);
-        //var_dump($text_cut);
-        return $text_cut;
-
-    }
-
 }

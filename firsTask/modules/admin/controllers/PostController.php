@@ -2,7 +2,6 @@
 
 namespace app\modules\admin\controllers;
 
-
 use Yii;
 use app\models\Post;
 use app\models\PostSearch;

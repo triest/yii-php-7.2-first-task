@@ -1,5 +1,6 @@
 <?php
 namespace app\controllers;
+
 use app\models\Post;
 use app\models\Tag;
 use app\models\Comment;
@@ -144,8 +145,8 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    public function actionFindtag($tagname){
 
+    public function actionFindtag($tagname){
         $tags=Tag::find()
             ->where(['name'=>$tagname])
             ->one();
