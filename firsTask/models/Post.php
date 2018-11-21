@@ -175,6 +175,7 @@ class Post extends \yii\db\ActiveRecord
     public static function getAll($pagination=5){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
        $query = Post::find();
        $count = $query->count();
        $pagination = new Pagination(['totalCount' => $count,'pageSize'=>$pagination]);
@@ -182,6 +183,8 @@ class Post extends \yii\db\ActiveRecord
             ->limit($pagination->limit)
             ->all();
 =======
+=======
+>>>>>>> parent of 76c62c9... cleare code? not end
 =======
 >>>>>>> parent of 76c62c9... cleare code? not end
         // build a DB query to get all articles with status = 1
