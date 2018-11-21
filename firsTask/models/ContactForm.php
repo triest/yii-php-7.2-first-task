@@ -13,9 +13,8 @@ use yii\base\Model;
  */
 class ContactForm extends Model
 {
-    public $username;
-   // public $password;
-   // public $rememberMe = true;
+    private $username;
+
 
     private $_user = false;
 
@@ -33,6 +32,22 @@ class ContactForm extends Model
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword(
         ];
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param mixed $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
     }
 
 }

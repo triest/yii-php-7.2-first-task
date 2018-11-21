@@ -99,10 +99,11 @@ class Post extends \yii\db\ActiveRecord
             ->viaTable('post_tag', ['post_id' => 'id']);
     }
 
-    public function getTags2($id){
-        $tags=null;
-        return $tags;
+    public function getId(){
+        return $this->id;
     }
+
+
 
     public function getSelectedTags()
     {
@@ -116,12 +117,6 @@ class Post extends \yii\db\ActiveRecord
         return $selectedIds;
     }
 
-
-    public function getSelectedTags2()
-    {
-        $selectedIds = $this->getTags()->select('id','name')->all();
-        return$selectedIds;
-    }
 
     public function saveTags($tags)
     {
@@ -142,7 +137,10 @@ class Post extends \yii\db\ActiveRecord
     {
      $this->status=$status;
      return $this->save(false);
+    }
 
+    public function getContent(){
+        return $this->content;
     }
 
     public function getDate()
@@ -151,14 +149,12 @@ class Post extends \yii\db\ActiveRecord
     }
 
     public static function getAll($pagination=5){
-         $query = Post::find();
-        $count = $query->count();
-        $pagination = new Pagination(['totalCount' => $count,'pageSize'=>$pagination]);
+       $query = Post::find();
+       $count = $query->count();
+       $pagination = new Pagination(['totalCount' => $count,'pageSize'=>$pagination]);
        return $post = $query->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
-        $date['post']=$post;
-        return $date;
     }
 
     public function clearCurrentTags()

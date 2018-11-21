@@ -27,19 +27,19 @@ $this->title =$post->title;
                             </div>
                         </header>
                         <div class="entry-content">
-                            <?= $post->content?>
+                            <?= $post->getContent()?>
                         </div>
                         <div class="social-share">
 
-                            <a href="index">К списку постов</a>
+                            <a href="index"><b>К списку постов</b></a>
 
                             <ul class="text-center pull-right">
 
                             </ul>
                         </div>
                         Теги:
-                        <?php foreach($tags as $tag):?>
-                            <a href="<?= Url::toRoute(['site/tag', 'tag'=>$tag]);?>"> <?= $tag ?> </a>
+                        <?php foreach($post->getSelectedTags() as $tag):?>
+                            <a href="<?= Url::toRoute(['site/findtag', 'tagname'=>$tag]);?>"> <?= $tag ?> </a>
 
                         <?php endforeach; ?>
                     </div>
@@ -47,12 +47,13 @@ $this->title =$post->title;
 
                     <b>Добавить комментарий:</b>
                     <?php $form = \yii\widgets\ActiveForm::begin([
-                        'action'=>['site/comment', 'id'=>$post->id],
+                        'action'=>['site/comment', 'id'=>$post->getId()],
                         'options'=>['class'=>'form-horizontal contact-form', 'role'=>'form']])?>
                     <div class="form-group">
                         <div class="col-md-12">
                             <?= $form->field($commentForm, 'comment')->textarea(['class'=>'form-control','placeholder'=>'Введие коментарий'])->label(false)?>
                         </div>
+                        <?= Yii::$app->session->getFlash('comment'); ?>
                     </div>
                     <button type="submit" class="btn send-btn">Отправить комментарий</button>
                     <?php \yii\widgets\ActiveForm::end();?>
@@ -66,7 +67,7 @@ $this->title =$post->title;
 
                             <div class="bottom-comment">
                                 <div class="comment-date">
-                                    <b><?= $comment->create_time ?></b>
+                                    <b><?= $comment->create_time ?>:</b>
                                 </div>
                                 <div class="commemt-text">
                                     <?= $comment->content ?>

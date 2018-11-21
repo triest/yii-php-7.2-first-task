@@ -22,4 +22,20 @@ class CommentForm extends Model
         $comment->status = 1;
         return $comment->save();
     }
+
+    /**
+     * @return mixed
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
+
+    /**
+     * @param mixed $comment
+     */
+    public function setComment($comment)
+    {
+        $this->comment = $comment;
+    }
 }

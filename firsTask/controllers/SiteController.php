@@ -62,7 +62,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-
         $query = Post::find()->where(['status'=>2]);
         $count = $query->count();
         $pageSize=10;
@@ -71,7 +70,6 @@ class SiteController extends Controller
             ->limit($pagination->limit)
             ->all();
         $commentForm = new CommentForm();
-        //die();
         return $this->render('index',
             [
                 'post'=>$posts,
@@ -84,12 +82,10 @@ class SiteController extends Controller
 
     public function actionView($id){
         $post = Post::findOne($id);
-        $selectedTags=$post->getSelectedTags();
         $comments=$post->getArticleComments();
         $commentForm=new CommentForm();
         return $this->render('single',[
             'post'=>$post,
-            'tags'=>$selectedTags,
             'comments'=>$comments,
             'commentForm'=>$commentForm
         ]);
@@ -104,13 +100,13 @@ class SiteController extends Controller
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        $loginForm = new LoginForm();
+        if ($loginForm->load(Yii::$app->request->post()) && $loginForm->login()) {
             return $this->goBack();
         }
-        $model->password = '';
+        $loginForm->setPassword( '') ;
         return $this->render('login', [
-            'model' => $model,
+            'model' => $loginForm,
         ]);
     }
     /**
@@ -148,12 +144,12 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    public function actionTag($tag){
+    public function actionFindtag($tagname){
 
-        $tags2=Tag::find()
-            ->where(['name'=>$tag])
+        $tags=Tag::find()
+            ->where(['name'=>$tagname])
             ->one();
-        $posts=$tags2->getPosts()->select(['id','title','create_time'])
+        $posts=$tags->getPostsByTag()->select(['id','title','create_time'])
             ->where(['status'=>2])
             ->all();
         $pagination = new Pagination(['totalCount' => 10, 'pageSize'=>10]);
@@ -170,7 +166,7 @@ class SiteController extends Controller
             $model->load(Yii::$app->request->post());
             if($model->saveComment($id))
             {
-                Yii::$app->getSession()->setFlash('comment', 'Your comment will be added soon!');
+                Yii::$app->getSession()->setFlash('comment', 'Ваш комментарий будет добавлен после проверки администратором!');
                 return $this->redirect(['site/view','id'=>$id]);
             }
             else{

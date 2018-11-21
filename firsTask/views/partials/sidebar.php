@@ -9,7 +9,7 @@ use yii\helpers\Url;
 
           <?   $tags=$this->context->getPoluparTags(); ?>
             <?php foreach($tags as $tag):?>
-                <a href="<?= Url::toRoute(['site/tag', 'tag'=>$tag->name]);?>"> <?= $tag->name ?> </a>
+                <a href="<?= Url::toRoute(['site/findtag', 'tagname'=>$tag->name]);?>"> <?= $tag->name ?> </a>
             <?php endforeach; ?>
 
         </aside>

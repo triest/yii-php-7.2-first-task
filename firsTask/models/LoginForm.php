@@ -13,8 +13,8 @@ use yii\base\Model;
  */
 class LoginForm extends Model
 {
-    public $username;
-    public $password;
+    private $username;
+    private $password;
     public $rememberMe = true;
 
     private $_user = false;
@@ -28,7 +28,6 @@ class LoginForm extends Model
         return [
             // email and password are both required
             [['username', 'password'], 'required'],
-            //[['email'], 'email'],
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
@@ -78,5 +77,53 @@ class LoginForm extends Model
         }
 
         return $this->_user;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param mixed $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isRememberMe()
+    {
+        return $this->rememberMe;
+    }
+
+    /**
+     * @param bool $rememberMe
+     */
+    public function setRememberMe($rememberMe)
+    {
+        $this->rememberMe = $rememberMe;
     }
 }
