@@ -4,12 +4,13 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\models\Post;
+use app\models\PostForm;
 use app\models\PostSearch;
-use app\models\Tag;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\helpers\ArrayHelper;
+use app\models\Tag;
 
 
 /**
@@ -88,10 +89,8 @@ class PostController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-      //  var_dump($model); echo "<br>";
-       // var_dump(Yii::$app->request->post());
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

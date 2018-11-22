@@ -36,10 +36,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'tags',
             'status',
             'author_id',
-            'article_id',
             'create_time',
             'update_time',
         ],
     ]) ?>
 
 </div>
+

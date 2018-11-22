@@ -8,6 +8,8 @@
 
 namespace app\models;
 
+use yii\base\Model;
+
 class PostForm  extends Model
 {
     public $title;
@@ -20,6 +22,8 @@ class PostForm  extends Model
     {
         return [
             [['title', 'content'], 'required'],
+
+            ['rememberMe', 'boolean'],
 
         ];
     }
@@ -55,5 +59,7 @@ class PostForm  extends Model
     {
         $this->content = $content;
     }
+
+
 
 }
