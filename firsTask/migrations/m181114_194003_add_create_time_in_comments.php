@@ -25,18 +25,5 @@ class m181114_194003_add_create_time_in_comments extends Migration
         return false;
     }
 
-    /*
-    // Use up()/down() to run migration code without a transaction.
-    public function up()
-    {
 
-    }
-
-    public function down()
-    {
-        echo "m181114_194003_add_create_time_in_comments cannot be reverted.\n";
-
-        return false;
-    }
-    */
 }

@@ -5,7 +5,6 @@ use app\models\Post;
 use app\models\Tag;
 use app\models\Comment;
 use app\models\CommentForm;
-//use Codeception\Step\Comment;
 use Yii;
 use yii\data\Pagination;
 use yii\filters\AccessControl;
@@ -91,35 +90,7 @@ class SiteController extends Controller
             'commentForm'=>$commentForm
         ]);
     }
-    /**
-     * Login action.
-     *
-     * @return Response|string
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-        $loginForm = new LoginForm();
-        if ($loginForm->load(Yii::$app->request->post()) && $loginForm->login()) {
-            return $this->goBack();
-        }
-        $loginForm->setPassword( '') ;
-        return $this->render('login', [
-            'model' => $loginForm,
-        ]);
-    }
-    /**
-     * Logout action.
-     *
-     * @return Response
-     */
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-        return $this->goHome();
-    }
+
     /**
      * Displays contact page.
      *
