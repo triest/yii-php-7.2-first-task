@@ -62,6 +62,7 @@ class Post extends \yii\db\ActiveRecord
             'update_time' => 'Update Time',
         ];
     }
+    
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -69,9 +70,7 @@ class Post extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'author_id']);
     }
-    public function getAuthor2()
-    {
-    }
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -79,35 +78,42 @@ class Post extends \yii\db\ActiveRecord
     {
         return $this->hasMany(PostTag::className(), ['post_id' => 'id']);
     }
+
     public function getItems()
     {
         return $this->hasMany(\phpDocumentor\Reflection\DocBlock\Tag::className(), ['id' => 'tag_id'])
             ->viaTable('post_tag', ['post_id' => 'id']);
     }
+
     public function getTags()
     {
         return $this->hasMany(Tag::className(), ['id' => 'tag_id'])
             ->viaTable('post_tag', ['post_id' => 'id']);
     }
+
     public function getTags2($id){
         $tags=null;
         return $tags;
     }
+
     public function getSelectedTags()
     {
         $selectedIds = $this->getTags()->select(['id','name'])/*->asArray()*/->all();
         return ArrayHelper::getColumn($selectedIds, 'name');
     }
+
     public function getSelectedComments()
     {
         $selectedIds = $this->getComments()->select(['id','content','status','post_id'])->where(['status'=>1])->all();
         return $selectedIds;
     }
+
     public function getSelectedTags2()
     {
         $selectedIds = $this->getTags()->select('id','name')->all();
         return$selectedIds;
     }
+
     public function saveTags($tags)
     {
         if (is_array($tags))
@@ -120,15 +126,18 @@ class Post extends \yii\db\ActiveRecord
             }
         }
     }
+
     public function saveStatus($status)
     {
         $this->status=$status;
         return $this->save(false);
     }
+
     public function getDate()
     {
         return Yii::$app->formatter->asDate($this->create_time);
     }
+
     public static function getAll($pagination=5){
         $query = Post::find();
         $count = $query->count();
@@ -139,18 +148,22 @@ class Post extends \yii\db\ActiveRecord
         $date['post']=$post;
         return $date;
     }
+
     public function clearCurrentTags()
     {
         PostTag::deleteAll(['post_id'=>$this->id]);
     }
+
     public function getComments()
     {
         return $this->hasMany(Comment::className(), ['post_id'=>'id']);
     }
+
     public function getArticleComments()
     {
         return $this->getComments()->where(['status'=>2])->all();
     }
+
     public function getPreview(){
         $text_cut=mb_substr($this->content, 0, 100);
         return $text_cut;
