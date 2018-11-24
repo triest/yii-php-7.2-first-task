@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611cfec5-1a78-4309-bf6f-dd9b1391a52a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/models/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/views/layouts/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/views/partials/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/views/partials/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/views/site/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/views/site/single.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_form.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -42,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
-              <caret line="95" column="58" selection-start-line="95" selection-start-column="58" selection-end-line="95" selection-end-column="58" />
+              <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -95,8 +87,8 @@
         <option value="$PROJECT_DIR$/firsTask/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/firsTask/views/partials/sidebar.php" />
         <option value="$PROJECT_DIR$/firsTask/views/site/single.php" />
-        <option value="$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php" />
         <option value="$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php" />
+        <option value="$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php" />
       </list>
     </option>
   </component>
@@ -343,12 +335,12 @@
       <workItem from="1542907099171" duration="1908000" />
       <workItem from="1542923921754" duration="1260000" />
       <workItem from="1543006912972" duration="4110000" />
-      <workItem from="1543046555820" duration="3511000" />
+      <workItem from="1543046555820" duration="3694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39167000" />
+    <option name="totallyTimeSpent" value="39350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -654,13 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="85" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/models/Post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1450">
@@ -668,17 +653,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="95" column="58" selection-start-line="95" selection-start-column="58" selection-end-line="95" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="85" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
         </state>
       </provider>
     </entry>
