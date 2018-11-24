@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611cfec5-1a78-4309-bf6f-dd9b1391a52a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firsTask/models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firsTask/views/site/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/views/site/single.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,29 +18,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_form.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+            <state relative-caret-position="272">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php">
+      <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firsTask/views/site/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="97" column="30" lean-forward="true" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+            <state relative-caret-position="221">
+              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Post.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/firsTask/models/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-685">
-              <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+            <state relative-caret-position="408">
+              <caret line="139" column="49" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -86,13 +87,18 @@
         <option value="$PROJECT_DIR$/firsTask/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/firsTask/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/firsTask/views/partials/sidebar.php" />
-        <option value="$PROJECT_DIR$/firsTask/views/site/single.php" />
         <option value="$PROJECT_DIR$/firsTask/migrations/m181124_091550_add_default_post_status.php" />
         <option value="$PROJECT_DIR$/firsTask/migrations/m181124_094200_add_default_post_status.php" />
         <option value="$PROJECT_DIR$/firsTask/migrations/m181124_094213_add_default_post_status.php" />
-        <option value="$PROJECT_DIR$/firsTask/models/Post.php" />
         <option value="$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php" />
         <option value="$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/sakura-city.info/public_html/resources/views/layouts/blog3.blade.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/sakura-city.info/public_html/resources/views/odl girlView" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/sakura-city.info/public_html/resources/views/girlView.blade.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/sakura-city.info/public_html/resources/views/users-list.blade.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/sakura-city.info/public_html/app/Http/Controllers/GirlsController.php" />
+        <option value="$PROJECT_DIR$/firsTask/views/site/single.php" />
+        <option value="$PROJECT_DIR$/firsTask/models/Post.php" />
       </list>
     </option>
   </component>
@@ -202,51 +208,7 @@
               <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
               <item name="firsTask" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
-              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
-              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
-              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
-              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
-              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
-              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
@@ -345,12 +307,12 @@
       <workItem from="1542907099171" duration="1908000" />
       <workItem from="1542923921754" duration="1260000" />
       <workItem from="1543006912972" duration="4110000" />
-      <workItem from="1543046555820" duration="7369000" />
+      <workItem from="1543046555820" duration="10851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43025000" />
+    <option name="totallyTimeSpent" value="46507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -359,11 +321,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" visible="true" weight="0.32946146" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.16145833" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24739583" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.25989583" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22135417" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -408,7 +371,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -594,13 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/views/site/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/views/partials/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -667,24 +623,31 @@
     <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_search.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/models/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-685">
-          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="97" column="30" lean-forward="true" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+        <state relative-caret-position="-243">
+          <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        <state relative-caret-position="272">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/views/site/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/models/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="139" column="49" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
         </state>
       </provider>
     </entry>

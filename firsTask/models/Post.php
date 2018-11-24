@@ -136,7 +136,8 @@ class Post extends \yii\db\ActiveRecord
 
     public function getDate()
     {
-        return Yii::$app->formatter->asDate($this->create_time);
+      // return Yii::$app->formatter->asDate($this->create_time);
+         return Yii::$app->formatter->asDatetime($this->create_time);
     }
 
     public static function getAll($pagination=5){

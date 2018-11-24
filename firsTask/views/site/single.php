@@ -23,7 +23,7 @@ $this->title =$post->title;
                         <header class="entry-header text-center text-uppercase">
                             <h1 class="entry-title"><?= $post->title?></h1>
                             <div class="entry-content">
-                                <b>By <?= $post->author->username?> On <?= $post->getDate();?></b>
+                           <b>  <?= $post->getDate();?></b>
                             </div>
                         </header>
                         <div class="entry-content">
