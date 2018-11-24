@@ -26,9 +26,6 @@ class UserController extends \yii\web\Controller
         return $this->render('index');
     }
 
-
-
-
     /**
      * Login action.
      *
@@ -50,6 +47,7 @@ class UserController extends \yii\web\Controller
             'model' => $loginForm,
         ]);
     }
+
     /**
      * Logout action.
      *

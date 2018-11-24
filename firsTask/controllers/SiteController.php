@@ -131,6 +131,7 @@ class SiteController extends Controller
                 'pagination'=>$pagination,
             ]);
     }
+
     public function  actionComment($id){
         $model = new CommentForm();
         //var_dump($id);
@@ -147,10 +148,12 @@ class SiteController extends Controller
             }
         }
     }
+
     public function getPoluparTags(){
         $tags=Tag::find()->limit(10)->all();
         return $tags;
     }
+
     public function getLastComments(){
         $comments=Comment::find()->where(['status'=>2])->orderBy('create_time','ASC')->limit(5)->all();
         return $comments;

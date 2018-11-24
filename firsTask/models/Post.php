@@ -62,7 +62,7 @@ class Post extends \yii\db\ActiveRecord
             'update_time' => 'Update Time',
         ];
     }
-    
+
     /**
      * @return \yii\db\ActiveQuery
      */

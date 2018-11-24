@@ -93,6 +93,10 @@ class PostController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
+        elseif ($model->load(Yii::$app->request->post()) && $model->save(false)!=true)
+        {
+            echo "not save";
+        }
 
         return $this->render('update', [
             'model' => $model,

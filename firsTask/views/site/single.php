@@ -31,13 +31,13 @@ $this->title =$post->title;
                         </div>
                         <div class="social-share">
 
-                            <a href="index"><b>К списку постов</b></a>
+                            <a href="index"><b>List of posts:</b></a>
 
                             <ul class="text-center pull-right">
 
                             </ul>
                         </div>
-                        Теги:
+                        Tags:
                         <?php foreach($post->getSelectedTags() as $tag):?>
                             <a href="<?= Url::toRoute(['site/findtag', 'tagname'=>$tag]);?>"> <?= $tag ?> </a>
 
@@ -45,7 +45,7 @@ $this->title =$post->title;
                     </div>
                     <br>
 
-                    <b>Добавить комментарий:</b>
+                    <b>Post comment:</b>
                     <?php $form = \yii\widgets\ActiveForm::begin([
                         'action'=>['site/comment', 'id'=>$post->getId()],
                         'options'=>['class'=>'form-horizontal contact-form', 'role'=>'form']])?>
@@ -55,12 +55,12 @@ $this->title =$post->title;
                         </div>
                         <?= Yii::$app->session->getFlash('comment'); ?>
                     </div>
-                    <button type="submit" class="btn send-btn">Отправить комментарий</button>
+                    <button type="submit" class="btn send-btn">Send</button>
                     <?php \yii\widgets\ActiveForm::end();?>
 
 
 
-                    Комментарии:
+                    Comments:
                     <?php if(!empty($comments)):?>
 
                         <?php foreach($comments as $comment):?>
