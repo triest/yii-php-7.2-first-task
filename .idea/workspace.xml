@@ -25,20 +25,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/update.php">
+      <file leaf-file-name="m181124_091550_add_default_post_status.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firsTask/migrations/m181124_091550_add_default_post_status.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="85" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="85" />
+            <state relative-caret-position="255">
+              <caret line="15" column="84" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="84" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php">
+      <file leaf-file-name="m181124_094200_add_default_post_status.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firsTask/migrations/m181124_094200_add_default_post_status.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+            <state relative-caret-position="238">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m181124_094213_add_default_post_status.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/firsTask/migrations/m181124_094213_add_default_post_status.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m181114_194003_add_create_time_in_comments.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firsTask/migrations/m181114_194003_add_create_time_in_comments.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -89,6 +107,9 @@
         <option value="$PROJECT_DIR$/firsTask/views/site/single.php" />
         <option value="$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php" />
         <option value="$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php" />
+        <option value="$PROJECT_DIR$/firsTask/migrations/m181124_091550_add_default_post_status.php" />
+        <option value="$PROJECT_DIR$/firsTask/migrations/m181124_094200_add_default_post_status.php" />
+        <option value="$PROJECT_DIR$/firsTask/migrations/m181124_094213_add_default_post_status.php" />
       </list>
     </option>
   </component>
@@ -193,6 +214,12 @@
               <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
               <item name="firsTask" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
+              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
@@ -335,12 +362,12 @@
       <workItem from="1542907099171" duration="1908000" />
       <workItem from="1542923921754" duration="1260000" />
       <workItem from="1543006912972" duration="4110000" />
-      <workItem from="1543046555820" duration="3694000" />
+      <workItem from="1543046555820" duration="6559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39350000" />
+    <option name="totallyTimeSpent" value="42215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -402,19 +429,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_search.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/models/PostForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/models/PostTag.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/models/Tag.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -474,13 +488,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/migrations/m181114_204008_add_author_to_comments.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/migrations/m181114_194003_add_create_time_in_comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/mail/layouts/html.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -653,10 +660,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php">
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="1479">
+          <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -667,10 +674,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php">
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+        <state relative-caret-position="272">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/migrations/m181114_194003_add_create_time_in_comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/migrations/m181124_091550_add_default_post_status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="84" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/migrations/m181124_094200_add_default_post_status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/migrations/m181124_094213_add_default_post_status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
         </state>
       </provider>
     </entry>
