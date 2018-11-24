@@ -132,7 +132,10 @@ class PostController extends Controller
     public function actionSetTags($id){
         $post=$this->findModel($id);
         $selectedTags=$post->getSelectedTags();
+
+        //var_dump($selectedTags);
         $tags=ArrayHelper::map(Tag::find()->all(),'id','name');
+       // var_dump($tags);
         if(Yii::$app->request->isPost){
             $tags=Yii::$app->request->post('tags');
             $post->saveTags($tags);

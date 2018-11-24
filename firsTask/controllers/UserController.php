@@ -22,7 +22,7 @@ class UserController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        $this->layout = 'admin';
+        $this->layout = 'main';
         return $this->render('index');
     }
 

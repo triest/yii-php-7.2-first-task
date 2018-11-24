@@ -99,8 +99,10 @@ class Post extends \yii\db\ActiveRecord
 
     public function getSelectedTags()
     {
-        $selectedIds = $this->getTags()->select(['id','name'])/*->asArray()*/->all();
-        return ArrayHelper::getColumn($selectedIds, 'name');
+        $selectedIds = $this->getTags()->select(['id','name'])->asArray()->all();
+       // $selectedIds =ArrayHelper::map($selectedIds,'id','name');
+       // return $selectedIds;
+        return ArrayHelper::getColumn($selectedIds, 'id');
     }
 
     public function getSelectedComments()
@@ -109,10 +111,10 @@ class Post extends \yii\db\ActiveRecord
         return $selectedIds;
     }
 
-    public function getSelectedTags2()
+    public function getSelectedTagsForPost()
     {
-        $selectedIds = $this->getTags()->select('id','name')->all();
-        return$selectedIds;
+        $selectedIds = $this->getTags()->select(['id','name'])->all();
+        return ArrayHelper::getColumn($selectedIds, 'name');
     }
 
     public function saveTags($tags)
@@ -136,7 +138,6 @@ class Post extends \yii\db\ActiveRecord
 
     public function getDate()
     {
-      // return Yii::$app->formatter->asDate($this->create_time);
          return Yii::$app->formatter->asDatetime($this->create_time);
     }
 

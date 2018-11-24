@@ -38,7 +38,7 @@ $this->title =$post->title;
                             </ul>
                         </div>
                         Tags:
-                        <?php foreach($post->getSelectedTags() as $tag):?>
+                        <?php foreach($post->getSelectedTagsForPost() as $tag):?>
                             <a href="<?= Url::toRoute(['site/findtag', 'tagname'=>$tag]);?>"> <?= $tag ?> </a>
 
                         <?php endforeach; ?>
