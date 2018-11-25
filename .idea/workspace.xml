@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611cfec5-1a78-4309-bf6f-dd9b1391a52a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/firsTask/modules/admin/views/user/status.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/modules/admin/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/modules/admin/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/modules/admin/views/layouts/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/modules/admin/views/layouts/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/modules/admin/views/user/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/modules/admin/views/user/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/modules/admin/views/user/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/modules/admin/views/user/view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/firsTask/models/User.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="482">
-              <caret line="146" column="22" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
+              <caret line="146" column="31" selection-start-line="146" selection-start-column="31" selection-end-line="146" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -412,7 +405,7 @@
       <workItem from="1543079133378" duration="13326000" />
       <workItem from="1543143645401" duration="4397000" />
       <workItem from="1543155044271" duration="756000" />
-      <workItem from="1543155805440" duration="2492000" />
+      <workItem from="1543155805440" duration="2858000" />
     </task>
     <task id="LOCAL-00001" summary="Add comments to controllers.">
       <created>1543156357003</created>
@@ -421,11 +414,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543156357004</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add administrator status setting for the user in the administrator module.">
+      <created>1543158894140</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543158894140</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68676000" />
+    <option name="totallyTimeSpent" value="69042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -496,7 +496,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add comments to controllers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add comments to controllers." />
+    <MESSAGE value="Add administrator status setting for the user in the administrator module." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add administrator status setting for the user in the administrator module." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -796,7 +797,7 @@
     <entry file="file://$PROJECT_DIR$/firsTask/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
-          <caret line="146" column="22" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
+          <caret line="146" column="31" selection-start-line="146" selection-start-column="31" selection-end-line="146" selection-end-column="31" />
         </state>
       </provider>
     </entry>
