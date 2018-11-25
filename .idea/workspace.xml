@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611cfec5-1a78-4309-bf6f-dd9b1391a52a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/yii2settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firsTask/views/site/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/views/site/single.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firsTask/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firsTask/modules/admin/controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/firsTask/modules/admin/controllers/CommentController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,30 +18,42 @@
     <pharConfigPath>$PROJECT_DIR$/firsTask/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php">
+    <leaf>
+      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firsTask/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="145">
+              <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
+              <folding>
+                <element signature="e#34#54#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firsTask/views/site/single.php">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firsTask/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+            <state relative-caret-position="369">
+              <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/firsTask/models/Post.php">
+      <file leaf-file-name="CategoryController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/CategoryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="139" column="49" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
+            <state relative-caret-position="-685">
+              <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/CommentController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="128" column="36" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -63,7 +76,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/firsTask/views/site/index.php" />
-        <option value="$PROJECT_DIR$/firsTask/modules/admin/controllers/CommentController.php" />
         <option value="$PROJECT_DIR$/firsTask/modules/admin/views/comment/index.php" />
         <option value="$PROJECT_DIR$/firsTask/modules/admin/views/comment/view.php" />
         <option value="$PROJECT_DIR$/firsTask/modules/admin/views/post/index.php" />
@@ -79,26 +91,37 @@
         <option value="$PROJECT_DIR$/firsTask/modules/admin/views/post/view.php" />
         <option value="$PROJECT_DIR$/firsTask/models/User.php" />
         <option value="$PROJECT_DIR$/firsTask/controllers/AuthController.php" />
-        <option value="$PROJECT_DIR$/firsTask/modules/admin/views/layouts/admin.php" />
         <option value="$PROJECT_DIR$/firsTask/migrations/m181114_194003_add_create_time_in_comments.php" />
-        <option value="$PROJECT_DIR$/firsTask/views/layouts/admin.php" />
         <option value="$PROJECT_DIR$/firsTask/models/Comment.php" />
-        <option value="$PROJECT_DIR$/firsTask/controllers/SiteController.php" />
-        <option value="$PROJECT_DIR$/firsTask/controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/firsTask/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/firsTask/views/partials/sidebar.php" />
         <option value="$PROJECT_DIR$/firsTask/migrations/m181124_091550_add_default_post_status.php" />
         <option value="$PROJECT_DIR$/firsTask/migrations/m181124_094200_add_default_post_status.php" />
         <option value="$PROJECT_DIR$/firsTask/migrations/m181124_094213_add_default_post_status.php" />
-        <option value="$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php" />
         <option value="$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php" />
         <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/sakura-city.info/public_html/resources/views/layouts/blog3.blade.php" />
         <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/sakura-city.info/public_html/resources/views/odl girlView" />
         <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/sakura-city.info/public_html/resources/views/girlView.blade.php" />
         <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/sakura-city.info/public_html/resources/views/users-list.blade.php" />
         <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/sakura-city.info/public_html/app/Http/Controllers/GirlsController.php" />
+        <option value="$PROJECT_DIR$/firsTask/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/firsTask/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/firsTask/views/layouts/admin.php" />
+        <option value="$PROJECT_DIR$/firsTask/modules/admin/views/layouts/admin.php" />
+        <option value="$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php" />
         <option value="$PROJECT_DIR$/firsTask/views/site/single.php" />
         <option value="$PROJECT_DIR$/firsTask/models/Post.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/city.ru/public_html/models/SignupForm.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/city.ru/public_html/views/auth/signup.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/city.ru/public_html/views/layouts/main.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/city.ru/public_html/views/site/create" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/city.ru/public_html/modules/admin/views/post/create.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/city.ru/public_html/models/Reviews.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/city.ru/public_html/modules/admin/views/layouts/admin.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/city.ru/public_html/controllers/SiteController.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/city.ru/public_html/views/site/create.php" />
+        <option value="&lt;9382c2c2-de88-4570-ad9a-0f1ef8f8f57c&gt;/city.ru/public_html/views/site/_form.php" />
+        <option value="$PROJECT_DIR$/firsTask/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/firsTask/modules/admin/controllers/CommentController.php" />
       </list>
     </option>
   </component>
@@ -113,7 +136,7 @@
       <path value="$PROJECT_DIR$/firsTask/web/assets/dca22a73/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/firsTask/vendor/bower-asset/jquery" />
       <path value="$PROJECT_DIR$/firsTask/vendor/bower-asset/punycode" />
@@ -192,6 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,7 +232,40 @@
               <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
               <item name="firsTask" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
+              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
+              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
+              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
+              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Yii-curse-7.2" type="462c0819:PsiDirectoryNode" />
+              <item name="firsTask" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Yii-curse-7.2" type="b2602c69:ProjectViewProjectNode" />
@@ -255,7 +312,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,7 +324,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -307,12 +363,16 @@
       <workItem from="1542907099171" duration="1908000" />
       <workItem from="1542923921754" duration="1260000" />
       <workItem from="1543006912972" duration="4110000" />
-      <workItem from="1543046555820" duration="10851000" />
+      <workItem from="1543046555820" duration="12049000" />
+      <workItem from="1543079133378" duration="13326000" />
+      <workItem from="1543143645401" duration="4397000" />
+      <workItem from="1543155044271" duration="756000" />
+      <workItem from="1543155805440" duration="364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46507000" />
+    <option name="totallyTimeSpent" value="66548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -320,13 +380,13 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Migrations" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" visible="true" weight="0.32946146" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32946146" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.25989583" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22135417" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.3140625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24010417" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -338,6 +398,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="File Transfer" order="12" visible="true" weight="0.32946146" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
@@ -366,6 +427,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -375,37 +446,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/firsTask/models/Lookup.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/models/Category.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/views/auth/login-old.php" />
-    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/views/site/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/controllers/AuthController.php" />
     <entry file="file://$PROJECT_DIR$/firsTask/config/web.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -451,13 +491,6 @@
     <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/default/index.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/layouts/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/layouts/index.php" />
     <entry file="file://$PROJECT_DIR$/firsTask/views/user/index.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -474,20 +507,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/views/partials/comment.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/views/auth/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/views/auth/signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/models/CategorySearch.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -520,26 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="155" selection-start-line="155" selection-end-line="155" />
-          <folding>
-            <element signature="e#34#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-          <folding>
-            <element signature="e#36#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/models/CommentForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -551,9 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#6#26#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,27 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/views/layouts/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
@@ -623,31 +598,129 @@
     <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_search.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-243">
-          <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/models/Tag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-674" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2131">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/models/TagSearch.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/views/layouts/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/Module.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/layouts/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="80" column="7" lean-forward="true" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/views/auth/signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/views/auth/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/tags.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/views/post/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="135" column="34" selection-start-line="135" selection-start-column="34" selection-end-line="135" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/views/site/single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        <state relative-caret-position="323">
+          <caret line="40" column="65" lean-forward="true" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firsTask/models/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="139" column="49" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
+        <state relative-caret-position="491">
+          <caret line="116" column="60" lean-forward="true" selection-start-line="116" selection-start-column="60" selection-end-line="116" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-685">
+          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
+          <folding>
+            <element signature="e#34#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firsTask/modules/admin/controllers/CommentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="128" column="36" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
         </state>
       </provider>
     </entry>

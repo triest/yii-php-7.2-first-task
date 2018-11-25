@@ -129,6 +129,7 @@ class PostController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 
+
     public function actionSetTags($id){
         $post=$this->findModel($id);
         $selectedTags=$post->getSelectedTags();
@@ -143,6 +144,7 @@ class PostController extends Controller
         }
         return $this->render('tags',['post'=>$post,'tags'=>$tags,'selectedTags'=>$selectedTags]);
     }
+
     public function actionSetStatus($id){
         $post=$this->findModel($id);
         if(Yii::$app->request->isPost){

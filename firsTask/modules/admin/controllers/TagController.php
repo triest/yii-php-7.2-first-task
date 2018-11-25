@@ -121,7 +121,6 @@ class TagController extends Controller
         if (($model = Tag::findOne($id)) !== null) {
             return $model;
         }
-
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 }

@@ -126,6 +126,7 @@ class CommentController extends Controller
     }
 
 
+    /*Set checked  statu for comment*/
     public function actionSetStatus($id){
         $comment=$this->findModel($id);
 
