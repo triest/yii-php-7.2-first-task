@@ -97,11 +97,10 @@ class Post extends \yii\db\ActiveRecord
         return $tags;
     }
 
+    /*select tags for set tags in admin module*/
     public function getSelectedTags()
     {
         $selectedIds = $this->getTags()->select(['id','name'])->asArray()->all();
-       // $selectedIds =ArrayHelper::map($selectedIds,'id','name');
-       // return $selectedIds;
         return ArrayHelper::getColumn($selectedIds, 'id');
     }
 
@@ -111,6 +110,7 @@ class Post extends \yii\db\ActiveRecord
         return $selectedIds;
     }
 
+    /*select tags for set tags for view */
     public function getSelectedTagsForPost()
     {
         $selectedIds = $this->getTags()->select(['id','name'])->all();
@@ -167,8 +167,9 @@ class Post extends \yii\db\ActiveRecord
         return $this->getComments()->where(['status'=>2])->all();
     }
 
+    /*get preview for main page*/
     public function getPreview(){
-        $text_cut=mb_substr($this->content, 0, 100);
+        $text_cut=mb_substr($this->getContent(), 0, 100);
         return $text_cut;
     }
 

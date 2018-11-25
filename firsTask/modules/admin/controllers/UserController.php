@@ -124,4 +124,14 @@ class UserController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    public function actionSetStatus($id){
+        $user=$this->findModel($id);
+        if(Yii::$app->request->isPost){
+            $status=Yii::$app->request->post("status");
+            $user->saveStatus($status);
+            return $this->actionView($id);
+        }
+        return $this->render('status',['user'=>$user]);
+    }
 }

@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'password',
             'salt',
             //'profile',
-            //'isAdmin',
+            'isAdmin',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

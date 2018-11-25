@@ -141,4 +141,10 @@ class User  extends \yii\db\ActiveRecord implements IdentityInterface
         return $this->name;
     }
 
+
+    public function saveStatus($status)
+    {
+        $this->isAdmin=$status;
+        return $this->save(false);
+    }
 }
