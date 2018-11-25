@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
+use app\models\Post;
 $this->title = "Список статей";
 ?>
 <!--main content start-->
@@ -11,14 +12,14 @@ $this->title = "Список статей";
                 <?php foreach($post as $article):?>
                     <article class="post">
                         <div class="post-thumb">
-                            <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>"></a>
+                            <a href="<?= Url::toRoute(['site/view', 'id'=>$article->getId()]);?>"></a>
 
                         </div>
                         <div class="post-content">
                             <header class="entry-header text-center text-uppercase">
                                 <h6></a></h6>
 
-                                <h1 class="entry-title"><a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>"><?= $article->title?></a></h1>
+                                <h1 class="entry-title"><a href="<?= Url::toRoute(['site/view', 'id'=>$article->getId()]);?>"><?= $article->getTitle()?></a></h1>
                                 <?= $article->getDate();?></span><ul class="text-center pull-right"></ul>
 
                             </header>
@@ -28,7 +29,7 @@ $this->title = "Список статей";
                                 </p>
 
                                 <div class="btn-continue-reading text-center text-uppercase">
-                                    <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>" class="more-link">Detail</a>
+                                    <a href="<?= Url::toRoute(['site/view', 'id'=>$article->getId()]);?>" class="more-link">Detail</a>
                                 </div>
                             </div>
 

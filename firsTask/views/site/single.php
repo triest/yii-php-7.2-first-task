@@ -21,7 +21,7 @@ $this->title =$post->title;
 
                     <div class="post-content">
                         <header class="entry-header text-center text-uppercase">
-                            <h1 class="entry-title"><?= $post->title?></h1>
+                            <h1 class="entry-title"><?= $post->getTitle()?></h1>
                             <div class="entry-content">
                            <b>  <?= $post->getDate();?></b>
                             </div>
@@ -67,10 +67,10 @@ $this->title =$post->title;
 
                             <div class="bottom-comment">
                                 <div class="comment-date">
-                                    <b><?= $comment->create_time ?>:</b>
+                                    <b><?= $comment->getCreateTime() ?>:</b>
                                 </div>
                                 <div class="commemt-text">
-                                    <?= $comment->content ?>
+                                    <?= $comment->getContent() ?>
                                 </div>
 
                             </div>

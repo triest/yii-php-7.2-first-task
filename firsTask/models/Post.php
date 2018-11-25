@@ -180,4 +180,104 @@ class Post extends \yii\db\ActiveRecord
     public function getId(){
         return $this->id;
     }
+
+    /**
+     * @param int $id
+     * @return Post
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @param string $content
+     * @return Post
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param int $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAuthorId()
+    {
+        return $this->author_id;
+    }
+
+    /**
+     * @param int $author_id
+     */
+    public function setAuthorId($author_id)
+    {
+        $this->author_id = $author_id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreateTime()
+    {
+        return $this->create_time;
+    }
+
+    /**
+     * @param string $create_time
+     */
+    public function setCreateTime($create_time)
+    {
+        $this->create_time = $create_time;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUpdateTime()
+    {
+        return $this->update_time;
+    }
+
+    /**
+     * @param string $update_time
+     */
+    public function setUpdateTime($update_time)
+    {
+        $this->update_time = $update_time;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param string $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
 }

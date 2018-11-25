@@ -20,7 +20,7 @@ class SignupForm extends Model
         ];
     }
     
-    public function signup()
+    public function signUp()
     {
         if($this->validate())
         {

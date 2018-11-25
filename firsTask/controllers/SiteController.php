@@ -136,7 +136,6 @@ class SiteController extends Controller
     /*Send comment to post*/
     public function  actionComment($id){
         $model = new CommentForm();
-        //var_dump($id);
         if(Yii::$app->request->isPost)
         {
             $model->load(Yii::$app->request->post());

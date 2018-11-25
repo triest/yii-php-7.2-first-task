@@ -62,7 +62,53 @@ class Tag extends \yii\db\ActiveRecord
             ->viaTable('post_tag',['tag_id'=>'id']);
     }
 
-    public function getName(){
 
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFrequency()
+    {
+        return $this->frequency;
+    }
+
+    /**
+     * @param int $frequency
+     */
+    public function setFrequency($frequency)
+    {
+        $this->frequency = $frequency;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 }

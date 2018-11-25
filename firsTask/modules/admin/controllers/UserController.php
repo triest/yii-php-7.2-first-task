@@ -5,6 +5,7 @@ namespace app\modules\admin\controllers;
 use Yii;
 use app\models\User;
 use app\models\UserSearch;
+use yii\db\StaleObjectException;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -104,7 +105,12 @@ class UserController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        try {
+            $this->findModel($id)->delete();
+        } catch (StaleObjectException $e) {
+        } catch (NotFoundHttpException $e) {
+        } catch (\Throwable $e) {
+        }
 
         return $this->redirect(['index']);
     }
@@ -126,7 +132,10 @@ class UserController extends Controller
     }
 
     public function actionSetStatus($id){
-        $user=$this->findModel($id);
+        try {
+            $user = $this->findModel($id);
+        } catch (NotFoundHttpException $e) {
+        }
         if(Yii::$app->request->isPost){
             $status=Yii::$app->request->post("status");
             $user->saveStatus($status);

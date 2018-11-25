@@ -5,6 +5,7 @@ namespace app\modules\admin\controllers;
 use Yii;
 use app\models\Comment;
 use app\models\CommentSearch;
+use yii\db\StaleObjectException;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -104,7 +105,12 @@ class CommentController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        try {
+            $this->findModel($id)->delete();
+        } catch (StaleObjectException $e) {
+        } catch (NotFoundHttpException $e) {
+        } catch (\Throwable $e) {
+        }
 
         return $this->redirect(['index']);
     }
@@ -128,7 +134,10 @@ class CommentController extends Controller
 
     /*Set checked  statu for comment*/
     public function actionSetStatus($id){
-        $comment=$this->findModel($id);
+        try {
+            $comment = $this->findModel($id);
+        } catch (NotFoundHttpException $e) {
+        }
 
         if(Yii::$app->request->isPost){
             $status=Yii::$app->request->post("status");

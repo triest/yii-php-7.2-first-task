@@ -9,7 +9,7 @@ use yii\helpers\Url;
 
           <?   $tags=$this->context->getPoluparTags(); ?>
             <?php foreach($tags as $tag):?>
-                <a href="<?= Url::toRoute(['site/findtag', 'tagname'=>$tag->name]);?>"> <?= $tag->name ?> </a>
+                <a href="<?= Url::toRoute(['site/findtag', 'tagname'=>$tag->getName()]);?>"> <?= $tag->getName() ?> </a>
             <?php endforeach; ?>
 
         </aside>
@@ -19,7 +19,7 @@ use yii\helpers\Url;
             <ul>
                 <?   $comments=$this->context->getLastComments(); ?>
                 <?php foreach($comments as $comment): ?>
-                    <?= $comment->content ?> <br>
+                    <?= $comment->getContent() ?> <br>
                 <?php endforeach; ?>
             </ul>
         </aside>

@@ -67,4 +67,84 @@ class Comment extends \yii\db\ActiveRecord
         $this->status=$status;
         return $this->save(false);
     }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param string $content
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreateTime()
+    {
+        return $this->create_time;
+    }
+
+    /**
+     * @param string $create_time
+     */
+    public function setCreateTime($create_time)
+    {
+        $this->create_time = $create_time;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param int $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPostId()
+    {
+        return $this->post_id;
+    }
+
+    /**
+     * @param int $post_id
+     */
+    public function setPostId($post_id)
+    {
+        $this->post_id = $post_id;
+    }
 }
