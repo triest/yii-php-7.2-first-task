@@ -10,7 +10,7 @@ namespace app\models;
 
 use yii\base\Model;
 
-class PostForm  extends Model
+class PostForm extends Model
 {
     public $title;
     public $content;
@@ -59,7 +59,6 @@ class PostForm  extends Model
     {
         $this->content = $content;
     }
-
 
 
 }

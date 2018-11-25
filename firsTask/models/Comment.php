@@ -34,9 +34,15 @@ class Comment extends \yii\db\ActiveRecord
             [['content'], 'required'],
             [['status', 'post_id'], 'integer'],
             [['content'], 'string', 'max' => 255],
-            [['post_id'], 'exist', 'skipOnError' => true, 'targetClass' => Post::className(), 'targetAttribute' => ['post_id' => 'id']],
-            [['create_time'], 'date','format'=>'php:Y-m-d-h-mm-s'],
-            [['create_time'],'default','value'=>date('Y-m-d H:i:s.u ')]
+            [
+                ['post_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => Post::className(),
+                'targetAttribute' => ['post_id' => 'id']
+            ],
+            [['create_time'], 'date', 'format' => 'php:Y-m-d-h-mm-s'],
+            [['create_time'], 'default', 'value' => date('Y-m-d H:i:s.u ')]
         ];
     }
 
@@ -64,7 +70,7 @@ class Comment extends \yii\db\ActiveRecord
 
     public function saveStatus($status)
     {
-        $this->status=$status;
+        $this->status = $status;
         return $this->save(false);
     }
 

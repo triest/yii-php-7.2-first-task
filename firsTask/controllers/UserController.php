@@ -17,7 +17,6 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 
 
-
 class UserController extends \yii\web\Controller
 {
     public function actionIndex()
@@ -42,7 +41,7 @@ class UserController extends \yii\web\Controller
         if ($loginForm->load(Yii::$app->request->post()) && $loginForm->login()) {
             return $this->goBack();
         }
-        $loginForm->setPassword( '') ;
+        $loginForm->setPassword('');
         return $this->render('login', [
             'model' => $loginForm,
         ]);

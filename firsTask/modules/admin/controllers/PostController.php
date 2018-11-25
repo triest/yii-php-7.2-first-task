@@ -36,6 +36,7 @@ class PostController extends Controller
 
     /**
      * Lists all Post models.
+     *
      * @return mixed
      */
     public function actionIndex()
@@ -51,6 +52,7 @@ class PostController extends Controller
 
     /**
      * Displays a single Post model.
+     *
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -65,6 +67,7 @@ class PostController extends Controller
     /**
      * Creates a new Post model.
      * If creation is successful, the browser will be redirected to the 'view' page.
+     *
      * @return mixed
      */
     public function actionCreate()
@@ -83,6 +86,7 @@ class PostController extends Controller
     /**
      * Updates an existing Post model.
      * If update is successful, the browser will be redirected to the 'view' page.
+     *
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -103,6 +107,7 @@ class PostController extends Controller
     /**
      * Deletes an existing Post model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
+     *
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -122,6 +127,7 @@ class PostController extends Controller
     /**
      * Finds the Post model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
+     *
      * @param integer $id
      * @return Post the loaded model
      * @throws NotFoundHttpException if the model cannot be found
@@ -136,28 +142,30 @@ class PostController extends Controller
     }
 
 
-    public function actionSetTags($id){
-        $post=$this->findModel($id);
-        $selectedTags=$post->getSelectedTags();
+    public function actionSetTags($id)
+    {
+        $post = $this->findModel($id);
+        $selectedTags = $post->getSelectedTags();
 
         //var_dump($selectedTags);
-        $tags=ArrayHelper::map(Tag::find()->all(),'id','name');
-       // var_dump($tags);
-        if(Yii::$app->request->isPost){
-            $tags=Yii::$app->request->post('tags');
+        $tags = ArrayHelper::map(Tag::find()->all(), 'id', 'name');
+        // var_dump($tags);
+        if (Yii::$app->request->isPost) {
+            $tags = Yii::$app->request->post('tags');
             $post->saveTags($tags);
             return $this->actionView($id);
         }
-        return $this->render('tags',['post'=>$post,'tags'=>$tags,'selectedTags'=>$selectedTags]);
+        return $this->render('tags', ['post' => $post, 'tags' => $tags, 'selectedTags' => $selectedTags]);
     }
 
-    public function actionSetStatus($id){
-        $post=$this->findModel($id);
-        if(Yii::$app->request->isPost){
-            $status=Yii::$app->request->post("status");
+    public function actionSetStatus($id)
+    {
+        $post = $this->findModel($id);
+        if (Yii::$app->request->isPost) {
+            $status = Yii::$app->request->post("status");
             $post->saveStatus($status);
             return $this->actionView($id);
         }
-        return $this->render('status',['post'=>$post]);
+        return $this->render('status', ['post' => $post]);
     }
 }

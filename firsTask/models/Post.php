@@ -1,9 +1,11 @@
 <?php
+
 namespace app\models;
 
 use Yii;
 use yii\data\Pagination;
 use yii\helpers\ArrayHelper;
+
 /**
  * This is the model class for table "post".
  *
@@ -30,6 +32,7 @@ class Post extends \yii\db\ActiveRecord
     {
         return 'post';
     }
+
     /**
      * {@inheritdoc}
      */
@@ -38,14 +41,21 @@ class Post extends \yii\db\ActiveRecord
         return [
             [['title', 'content'], 'required'],
             [['status', 'author_id', 'article_id'], 'integer'],
-            [ [ 'status' ], 'in', 'range' => [ 1,2,3 ] ],
-            [['status'],'default','value'=>1],
-            [['create_time', 'update_time'], 'date','format'=>'php:Y-m-d-h-mm-s'],
-            [['create_time'],'default','value'=>date('Y-m-d H:i:s.u ')],
+            [['status'], 'in', 'range' => [1, 2, 3]],
+            [['status'], 'default', 'value' => 1],
+            [['create_time', 'update_time'], 'date', 'format' => 'php:Y-m-d-h-mm-s'],
+            [['create_time'], 'default', 'value' => date('Y-m-d H:i:s.u ')],
             [['title', 'content', 'tags'], 'string', 'max' => 255],
-            [['author_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['author_id' => 'id']],
+            [
+                ['author_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => User::className(),
+                'targetAttribute' => ['author_id' => 'id']
+            ],
         ];
     }
+
     /**
      * {@inheritdoc}
      */
@@ -92,38 +102,42 @@ class Post extends \yii\db\ActiveRecord
             ->viaTable('post_tag', ['post_id' => 'id']);
     }
 
-    public function getTags2($id){
-        $tags=null;
+    public function getTags2($id)
+    {
+        $tags = null;
         return $tags;
     }
 
     /*select tags for set tags in admin module*/
     public function getSelectedTags()
     {
-        $selectedIds = $this->getTags()->select(['id','name'])->asArray()->all();
+        $selectedIds = $this->getTags()->select(['id', 'name'])->asArray()->all();
         return ArrayHelper::getColumn($selectedIds, 'id');
     }
 
     public function getSelectedComments()
     {
-        $selectedIds = $this->getComments()->select(['id','content','status','post_id'])->where(['status'=>1])->all();
+        $selectedIds = $this->getComments()->select([
+            'id',
+            'content',
+            'status',
+            'post_id'
+        ])->where(['status' => 1])->all();
         return $selectedIds;
     }
 
     /*select tags for set tags for view */
     public function getSelectedTagsForPost()
     {
-        $selectedIds = $this->getTags()->select(['id','name'])->all();
+        $selectedIds = $this->getTags()->select(['id', 'name'])->all();
         return ArrayHelper::getColumn($selectedIds, 'name');
     }
 
     public function saveTags($tags)
     {
-        if (is_array($tags))
-        {
+        if (is_array($tags)) {
             $this->clearCurrentTags();
-            foreach($tags as $tag_id)
-            {
+            foreach ($tags as $tag_id) {
                 $tag = Tag::findOne($tag_id);
                 $this->link('tags', $tag);
             }
@@ -132,52 +146,56 @@ class Post extends \yii\db\ActiveRecord
 
     public function saveStatus($status)
     {
-        $this->status=$status;
+        $this->status = $status;
         return $this->save(false);
     }
 
     public function getDate()
     {
-         return Yii::$app->formatter->asDatetime($this->create_time);
+        return Yii::$app->formatter->asDatetime($this->create_time);
     }
 
-    public static function getAll($pagination=5){
+    public static function getAll($pagination = 5)
+    {
         $query = Post::find();
         $count = $query->count();
-        $pagination = new Pagination(['totalCount' => $count,'pageSize'=>$pagination]);
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => $pagination]);
         return $post = $query->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
-        $date['post']=$post;
+        $date['post'] = $post;
         return $date;
     }
 
     public function clearCurrentTags()
     {
-        PostTag::deleteAll(['post_id'=>$this->id]);
+        PostTag::deleteAll(['post_id' => $this->id]);
     }
 
     public function getComments()
     {
-        return $this->hasMany(Comment::className(), ['post_id'=>'id']);
+        return $this->hasMany(Comment::className(), ['post_id' => 'id']);
     }
 
     public function getArticleComments()
     {
-        return $this->getComments()->where(['status'=>2])->all();
+        return $this->getComments()->where(['status' => 2])->all();
     }
 
     /*get preview for main page*/
-    public function getPreview(){
-        $text_cut=mb_substr($this->getContent(), 0, 100);
+    public function getPreview()
+    {
+        $text_cut = mb_substr($this->getContent(), 0, 100);
         return $text_cut;
     }
 
-    public function getContent(){
+    public function getContent()
+    {
         return $this->content;
     }
 
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
     }
 

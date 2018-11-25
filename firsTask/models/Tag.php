@@ -59,9 +59,8 @@ class Tag extends \yii\db\ActiveRecord
     public function getPostsByTag()
     {
         return $this->hasMany(Post::className(), ['id' => 'post_id'])
-            ->viaTable('post_tag',['tag_id'=>'id']);
+            ->viaTable('post_tag', ['tag_id' => 'id']);
     }
-
 
 
     /**
